@@ -17,49 +17,67 @@
     <h1 class="text-2xl font-bold text-center mt-6 px-auto">Expense and Savings <span><i class="fas fa-hand-holding-usd"></i></span></h1>
 
     <!-- main section start -->
-    <main class="mb-8 mt-8 w-3/4 mx-auto flex justify-around">
+    <main class="mb-8 mt-8 lg:w-3/4 mx-auto lg:flex justify-around">
         <!-- image -->
-        <div class="w-2/4">
+        <div class="lg:w-2/4">
             <img src="images/money.png" alt="">
         </div>
         <!-- calculation -->
-        <div class="bg-green-300 w-2/4">
-            <div class="bg-red-300 px-8 py-auto">
-            <h1>Income</h1>
-            <span><span>Income:</span> 
-            <input id="income-input" type="number" placeholder="Your Total Income"></span>
+        <div class="bg-green-300 lg:w-2/4 text-center">
+            <div class="bg-red-300 my-8">
+                <h1 class="text-center font-bold pt-2 pb-1 text-xl">Income</h1>
 
-            <h1>Expences</h1>
-            <span><span>Food:</span> <input id="food-input" type="number" placeholder="Your Food Cost" class="border"></span><br>
-            <span><span>Rent:</span> <input id="rent-input" type="number" placeholder="Your Total Rent" class="border"></span><br>
-            <span><span>Clothes:</span> <input id="clothes-input" type="number" placeholder="Your Clothes Cost" class="border"></span><br>
-            <button class="bg-yellow-500" id="calculate-btn">Calculate</button>
+                <div class="text-center flex justify-center"> 
+                    <!-- flex justify-center -->
+                    <span class="">Income:</span>
+                    <input id="income-input" type="number" placeholder="Your Total Income">
+                </div>
 
-            <!-- Total Expenses:-->
-            <p>Total Expenses: <span id="total-expense"></span></p>
+                <h1 class="text-center font-bold text-xl py-1">Expenses</h1>
+                <div class="text-center flex justify-center">
+                    <span class="">Food:</span>
+                    <input id="food-input" type="number" placeholder="Your Food Cost" class="border">
+                </div>
 
-            <!-- Total Balance:-->
-            <p>Balance: <span id="total-balance"></span></p>
-            
-            <!-- Error Message -->
-            <p id="last-note" class="text-red-600"></p>
-            
-            <!-- savings start -->
-            <span>
-                <span>Save:</span> <input id="save-input" type="number" placeholder="Your Total Income" class="border">
-            </span>
-            <span>%</span>
-            <button class="bg-yellow-500" id="save-btn">Calculate</button>
+                <div class="text-center sayeef">
+                    <span class="pr-2">Rent:</span>
+                    <input id="rent-input" type="number" placeholder="Your Total Rent" class="border">
+                </div>
 
-            <p>Saving Amount: <span id="saving-amount"></span></p>
-            <p>Remaining Balance: <span id="remaining-balance"></span></p>
+                <div class="text-center sayeef">
+                    <span class="pr-2">Clothes:</span>
+                    <input id="clothes-input" type="number" placeholder="Your Clothes Cost" class="border">
+                </div>
 
-            <!-- Error Message -->
-            <p id="last-note" class="text-red-400"></p>
+                <button class="bg-yellow-500" id="calculate-btn">Calculate</button>
+
+                <!-- Total Expenses:-->
+                <p>Total Expenses: <span id="total-expense"></span></p>
+
+                <!-- Total Balance:-->
+                <p>Balance: <span id="total-balance"></span></p>
+                
+                <!-- Error Message -->
+                <p id="last-note" class="text-red-600"></p>
+                
+                <!-- savings start -->
+                <span>
+                    <span>Save:</span> <input id="save-input" type="number" placeholder="Your Total Income" class="border">
+                </span>
+                <span>%</span>
+                <button class="bg-yellow-500" id="save-btn">Calculate</button>
+
+                <p>Saving Amount: <span id="saving-amount"></span></p>
+                <p>Remaining Balance: <span id="remaining-balance"></span></p>
+
+                <!-- Error Message -->
+                <p id="last-note" class="text-red-400"></p>
 
             </div>
         </div>
     </main>
+
+    <h1 class="mt-10 pt-10 py-10">End</h1>
 
 
     <script src="js/app.js"></script>
