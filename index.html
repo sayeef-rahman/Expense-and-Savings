@@ -13,8 +13,31 @@
     <script src="https://kit.fontawesome.com/6dddcc9e62.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- heading/title -->
     <h1 class="text-4xl font-bold text-center mt-6 px-auto">Expense and Savings <span><i class="fas fa-hand-holding-usd"></i></span></h1>
-    
+
+    <!-- main section start -->
+    <main class="mb-8 text-2xl">
+        <!-- image -->
+        <div>
+            <img src="money.png" alt="">
+        </div>
+        <!-- calculation -->
+        <div>
+            <h1>Income</h1>
+            <span><span>Income:</span> 
+            <input id="income-input" type="number" placeholder="Your Total Income"></span>
+
+            <h1>Expences</h1>
+            <span><span>Food:</span> <input type="text" placeholder="Your Total Income" class="border"></span><br>
+            <span><span>Rent:</span> <input type="text" placeholder="Your Total Income" class="border"></span><br>
+            <span><span>Clothes:</span> <input type="text" placeholder="Your Total Income" class="border"></span><br>
+            <button id="calculate-btn">Calculate</button>
+
+            <!-- Total Expenses:-->
+            <p>Total Expenses:<span> 5500 </span></p>
+        </div>
+    </main>
 
 
 
