@@ -30,20 +30,32 @@
             <input id="income-input" type="number" placeholder="Your Total Income"></span>
 
             <h1>Expences</h1>
-            <span><span>Food:</span> <input id="food-input" type="number" placeholder="Your Total Income" class="border"></span><br>
-            <span><span>Rent:</span> <input id="rent-input" type="number" placeholder="Your Total Income" class="border"></span><br>
-            <span><span>Clothes:</span> <input id="clothes-input" type="number" placeholder="Your Total Income" class="border"></span><br>
+            <span><span>Food:</span> <input id="food-input" type="number" placeholder="Your Food Cost" class="border"></span><br>
+            <span><span>Rent:</span> <input id="rent-input" type="number" placeholder="Your Total Rent" class="border"></span><br>
+            <span><span>Clothes:</span> <input id="clothes-input" type="number" placeholder="Your Clothes Cost" class="border"></span><br>
             <button class="bg-yellow-500" id="calculate-btn">Calculate</button>
 
             <!-- Total Expenses:-->
             <p>Total Expenses: <span id="total-expense"></span></p>
             <!-- Total Balance:-->
             <p>Balance: <span id="total-balance"></span></p>
+
+            <p id="last-note" class="text-red-400"></p>
+            
+            <!-- savings start -->
+            <span>
+                <span>Save:</span> <input id="save-input" type="number" placeholder="Your Total Income" class="border">
+            </span>
+            <span>%</span>
+            <button class="bg-yellow-500" id="save-btn">Calculate</button>
+
+            <p>Saving Amount: <span id="saving-amount"></span></p>
+            <p>Remaining Balance: <span id="remaining-balance"></span></p>
+            <p id="last-note" class="text-red-400"></p>
+
             </div>
         </div>
     </main>
-
-
 
 
     <script src="js/app.js"></script>
