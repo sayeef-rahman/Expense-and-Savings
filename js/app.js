@@ -18,16 +18,26 @@ function inputBox(inputField){
 
 document.getElementById('calculate-btn').addEventListener('click',function(){
     const incomeTotal= inputBox('income-input');
-    console.log('Total Income: ',incomeTotal);
+    // console.log('Total Income: ',incomeTotal);
     const foodTotal= inputBox('food-input');
-    console.log('Total Food: ',foodTotal);
+    // console.log('Total Food: ',foodTotal);
     const rentTotal= inputBox('rent-input');
-    console.log('Total rent: ',rentTotal);
+    // console.log('Total rent: ',rentTotal);
     const clothesTotal= inputBox('clothes-input');
-    console.log('Total cloth: ',clothesTotal);
+    // console.log('Total cloth: ',clothesTotal);
 
     const expenseTotal= foodTotal+rentTotal+clothesTotal;
-    console.log('Total Expense: ',expenseTotal);
+    const balanceTotal= incomeTotal - expenseTotal;
+    
+    // console.log('Total Expense: ',expenseTotal);
+
+    if(incomeTotal < expenseTotal){
+        return alert('Income Can Not be Less Than Expense')
+    }
+    else{
+        document.getElementById('total-expense').innerText = expenseTotal;
+        document.getElementById('total-balance').innerText = balanceTotal;
+    }
 
 
 
