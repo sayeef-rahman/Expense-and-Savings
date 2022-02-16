@@ -8,6 +8,9 @@ function inputBox(inputField){
     {
         return alert('Please Enter Valid Number > 0');  
     }
+    else if(userInput.value == ''){
+        return alert('Please Fill the Empty Field.')
+    }
     else{
         return inputValue;
     }
@@ -22,5 +25,11 @@ document.getElementById('calculate-btn').addEventListener('click',function(){
     console.log('Total rent: ',rentTotal);
     const clothesTotal= inputBox('clothes-input');
     console.log('Total cloth: ',clothesTotal);
+
+    const expenseTotal= foodTotal+rentTotal+clothesTotal;
+    console.log('Total Expense: ',expenseTotal);
+
+
+
 
 });

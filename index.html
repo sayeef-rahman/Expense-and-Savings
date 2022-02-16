@@ -14,16 +14,17 @@
 </head>
 <body>
     <!-- heading/title -->
-    <h1 class="text-4xl font-bold text-center mt-6 px-auto">Expense and Savings <span><i class="fas fa-hand-holding-usd"></i></span></h1>
+    <h1 class="text-2xl font-bold text-center mt-6 px-auto">Expense and Savings <span><i class="fas fa-hand-holding-usd"></i></span></h1>
 
     <!-- main section start -->
-    <main class="mb-8 text-2xl">
+    <main class="mb-8 mt-8 w-3/4 mx-auto flex justify-around">
         <!-- image -->
-        <div>
+        <div class="w-2/4">
             <img src="images/money.png" alt="">
         </div>
         <!-- calculation -->
-        <div>
+        <div class="bg-green-300 w-2/4">
+            <div class="bg-red-300 px-8 py-auto">
             <h1>Income</h1>
             <span><span>Income:</span> 
             <input id="income-input" type="number" placeholder="Your Total Income"></span>
@@ -32,10 +33,11 @@
             <span><span>Food:</span> <input id="food-input" type="number" placeholder="Your Total Income" class="border"></span><br>
             <span><span>Rent:</span> <input id="rent-input" type="number" placeholder="Your Total Income" class="border"></span><br>
             <span><span>Clothes:</span> <input id="clothes-input" type="number" placeholder="Your Total Income" class="border"></span><br>
-            <button id="calculate-btn">Calculate</button>
+            <button class="bg-yellow-500" id="calculate-btn">Calculate</button>
 
             <!-- Total Expenses:-->
-            <p>Total Expenses:<span> 5500 </span></p>
+            <p>Total Expenses: <span id="total-expense"></span></p>
+            </div>
         </div>
     </main>
 
