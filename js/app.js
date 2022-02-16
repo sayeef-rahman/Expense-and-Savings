@@ -9,12 +9,18 @@ function inputBox(inputField){
         return alert('Please Enter Valid Number > 0');  
     }
     else{
-        console.log(typeof(inputValue));
-        //return parseFloat(inputValue);
+        return inputValue;
     }
 }
 
 document.getElementById('calculate-btn').addEventListener('click',function(){
     const incomeTotal= inputBox('income-input');
-    // console.log("Total Income: ",incomeTotal);
+    console.log('Total Income: ',incomeTotal);
+    const foodTotal= inputBox('food-input');
+    console.log('Total Food: ',foodTotal);
+    const rentTotal= inputBox('rent-input');
+    console.log('Total rent: ',rentTotal);
+    const clothesTotal= inputBox('clothes-input');
+    console.log('Total cloth: ',clothesTotal);
+
 });
