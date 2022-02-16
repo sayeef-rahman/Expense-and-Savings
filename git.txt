@@ -5,3 +5,7 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/Porgramming-Hero-web-course/money-master-sayeef-rahman.git
 git push -u origin main
+
+
+Private Repo:
+https://github.com/Porgramming-Hero-web-course/money-master-sayeef-rahman

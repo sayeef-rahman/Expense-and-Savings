@@ -14,70 +14,94 @@
 </head>
 <body>
     <!-- heading/title -->
-    <h1 class="text-2xl font-bold text-center mt-6 px-auto">Expense and Savings <span><i class="fas fa-hand-holding-usd"></i></span></h1>
+    <h1 class="text-2xl text-sky-600 font-bold text-center mt-6 px-auto lg:text-5xl">Expense and Savings <span><i class="fas fa-hand-holding-usd"></i></span></h1>
 
     <!-- main section start -->
-    <main class="mb-8 mt-8 lg:w-3/4 mx-auto lg:flex justify-around">
+    <main class="mt-8 lg:w-3/4 mx-auto lg:flex justify-around">
         <!-- image -->
         <div class="lg:w-2/4">
             <img src="images/money.png" alt="">
         </div>
         <!-- calculation -->
-        <div class="bg-green-300 lg:w-2/4 text-center">
-            <div class="bg-red-300 my-8">
-                <h1 class="text-center font-bold pt-2 pb-1 text-xl">Income</h1>
-
-                <div class="text-center flex justify-center"> 
-                    <!-- flex justify-center -->
-                    <span class="">Income:</span>
-                    <input id="income-input" type="number" placeholder="Your Total Income">
+        <div class="lg:w-2/4">
+            <div class="mt-8 lg:mt-2">
+                <h1 class="text-center text-sky-600 font-bold pt-2 pb-3 text-3xl lg:text-5xl">Income</h1>
+                <!-- lable+input start -->
+                <div class="flex pb-3">
+                    <div class="w-1/2 text-right"> 
+                        <span class="text-xl font-bold pr-2 lg:text-3xl">Income:</span>
+                    </div>
+                    <div>
+                        <input class="w-4/5 border-2 rounded-lg pl-2 lg:text-3xl" id="income-input" type="number" placeholder="Your Total Income">
+                    </div>
                 </div>
+                <!-- lable+input end -->
 
-                <h1 class="text-center font-bold text-xl py-1">Expenses</h1>
-                <div class="text-center flex justify-center">
-                    <span class="">Food:</span>
-                    <input id="food-input" type="number" placeholder="Your Food Cost" class="border">
+                <h1 class="text-center text-sky-600 font-bold pt-2 pb-3 text-3xl lg:text-5xl">Expenses</h1>
+
+                <!-- lable+input start -->
+                <div class="flex">
+                    <div class="w-1/2 text-right"> 
+                        <span class="text-xl font-bold pr-2 lg:text-3xl">Food:</span>
+                    </div>
+                    <div>
+                        <input class="w-4/5 border-2 rounded-lg pl-2 lg:text-3xl" id="food-input" type="number" placeholder="Your Food Cost" class="border">
+                    </div>
                 </div>
+                <!-- lable+input end -->
 
-                <div class="text-center sayeef">
-                    <span class="pr-2">Rent:</span>
-                    <input id="rent-input" type="number" placeholder="Your Total Rent" class="border">
+                <!-- lable+input start -->
+                <div class="flex pt-3">
+                    <div class="w-1/2 text-right"> 
+                        <span class="text-xl font-bold pr-2 lg:text-3xl">Rent:</span>
+                    </div>
+                    <div>
+                        <input class="w-4/5 border-2 rounded-lg pl-2 lg:text-3xl" id="rent-input" type="number" placeholder="Your Total Rent" class="border">
+                    </div>
                 </div>
+                <!-- lable+input end -->
 
-                <div class="text-center sayeef">
-                    <span class="pr-2">Clothes:</span>
-                    <input id="clothes-input" type="number" placeholder="Your Clothes Cost" class="border">
+                <!-- lable+input start -->
+                <div class="flex pt-3">
+                    <div class="w-1/2 text-right"> 
+                        <span class="text-xl font-bold pr-2 lg:text-3xl">Clothes:</span>
+                    </div>
+                    <div>
+                        <input class="w-4/5 border-2 rounded-lg pl-2 lg:text-3xl" id="clothes-input" type="number" placeholder="Your Clothes Cost" class="border">
+                    </div>
                 </div>
+                <!-- lable+input end -->
+                    
+            </div>
 
-                <button class="bg-yellow-500" id="calculate-btn">Calculate</button>
+            <div class="text-center mt-3">
+                <button class="bg-yellow-500 text-xl p-2 rounded-lg" id="calculate-btn">Calculate</button>
 
                 <!-- Total Expenses:-->
-                <p>Total Expenses: <span id="total-expense"></span></p>
+                <p class="text-xl font-bold pr-2 lg:text-3xl p-2">Total Expenses: <span id="total-expense" class="text-sky-600"></span></p>
 
                 <!-- Total Balance:-->
-                <p>Balance: <span id="total-balance"></span></p>
+                <p class="text-xl font-bold pr-2 lg:text-3xl pb-2">Balance: <span id="total-balance" class="text-sky-600"></span></p>
                 
                 <!-- Error Message -->
-                <p id="last-note" class="text-red-600"></p>
+                <p id="last-note" class="text-red-600 text-xl font-bold pr-2 lg:text-3xl pb-2"></p>
                 
                 <!-- savings start -->
                 <span>
-                    <span>Save:</span> <input id="save-input" type="number" placeholder="Your Total Income" class="border">
+                    <span class="text-xl font-bold pr-2 lg:text-3xl p-2">Save:</span>
+                    <input id="save-input" type="number" placeholder="in %" class="w-2/12 border-2 rounded-lg pl-2 lg:text-3xl">
                 </span>
-                <span>%</span>
-                <button class="bg-yellow-500" id="save-btn">Calculate</button>
+                <span class="text-xl font-bold pr-2 lg:text-3xl p-2">%</span>
+                <button class="bg-yellow-500 text-xl p-2 rounded-lg" id="save-btn">Save</button>
 
-                <p>Saving Amount: <span id="saving-amount"></span></p>
-                <p>Remaining Balance: <span id="remaining-balance"></span></p>
+                <p class="text-xl font-bold pr-2 lg:text-3xl pt-2">Saving Amount: <span id="saving-amount" class="text-sky-600"></span></p>
+                <p class="text-xl font-bold pr-2 lg:text-3xl pb-2">Remaining Balance: <span id="remaining-balance" class="text-sky-600"></span></p>
 
                 <!-- Error Message -->
-                <p id="last-note" class="text-red-400"></p>
-
+                <p id="last-note" class="text-red-600 text-xl font-bold pr-2 lg:text-3xl pb-2"></p>
             </div>
         </div>
     </main>
-
-    <h1 class="mt-10 pt-10 py-10">End</h1>
 
 
     <script src="js/app.js"></script>
