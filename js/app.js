@@ -33,17 +33,19 @@ document.getElementById('calculate-btn').addEventListener('click',function(){
 
     const expenseTotal=  totalExpense(foodTotal,rentTotal,clothesTotal);
     const balanceTotal= incomeTotal - expenseTotal;
+
+    const note= document.getElementById('last-note');
     
     // console.log('Total Expense: ',expenseTotal);
 
     if(incomeTotal < expenseTotal){
-        const note= document.getElementById('last-note');
         note.innerText='Income Can not be less than Expense';
         // return alert('Income Can Not be Less Than Expense')
     }
     else{
         document.getElementById('total-expense').innerText = expenseTotal;
         document.getElementById('total-balance').innerText = balanceTotal;
+        note.innerText='';
     }
 
 });
@@ -66,14 +68,16 @@ document.getElementById('save-btn').addEventListener('click',function(){
     const savingAmount= incomeTotal * (savePercent/100);
     //console.log('saving amount: ',savingAmount);
 
+    const note= document.getElementById('last-note');
+
     if(balanceTotal > savingAmount){
         document.getElementById('saving-amount').innerText = savingAmount;
         const remainingBalance = balanceTotal - savingAmount;
         document.getElementById('remaining-balance').innerText = remainingBalance;
         console.log('remaining amount: ',remainingBalance);
+        note.innerText='';
     }
     else{
-        const note= document.getElementById('last-note');
         note.innerText='Balance Can not be less than Savings';
         // return alert('Balance Can not be less than savings')
     }
